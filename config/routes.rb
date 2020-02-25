@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   resources :links
-  root 'static_pages#home'
+  root 'links#index'
 
   get '/home' => 'static_pages#home'
   get '/login' => 'static_pages#login'
