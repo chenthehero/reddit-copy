@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :links
   root 'static_pages#home'
 
   get '/home' => 'static_pages#home'
