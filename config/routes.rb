@@ -1,3 +1,13 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  root 'static_pages#home'
+
+  get '/home' => 'static_pages#home'
+  get '/login' => 'static_pages#login'
+  get '/page' => 'static_pages#page'
+  get '/profile' => 'static_pages#profile'
+
+  resources :posts
+
+  
 end
